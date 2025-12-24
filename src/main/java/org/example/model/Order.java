@@ -33,4 +33,14 @@ public class Order implements Comparable<Order> {
     public int compareTo(Order o) {
         return createdAt.compareTo(o.createdAt);
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", customerName='" + customerName + '\'' +
+                ", price=" + price +
+                ", createdAt=" + createdAt +
+                "}\n";
+    }
 }
