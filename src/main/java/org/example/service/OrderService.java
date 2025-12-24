@@ -12,7 +12,7 @@ public class OrderService {
     }
 
     public List<Order> sortOrdersByPrice(List<Order> orders) {
-        return orders.stream().sorted(Comparator.comparing(Order::getPrice)).toList();
+        return orders.stream().sorted(Comparator.comparingDouble(Order::getPrice)).toList();
     }
 
     public List<Order> sortOrdersByCustomerName(List<Order> orders) {
